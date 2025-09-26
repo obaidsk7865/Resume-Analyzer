@@ -28,7 +28,7 @@ def extract_text_from_file(uploaded_file):
     
     return uploaded_file.read().decode("utf-8")
 genai.configure(api_key=Gemini_API_KEY)
-model = genai.GenerativeModel("gemini-1.5-flash")
+model = genai.GenerativeModel("gemini-2.5-flash")
 if analyze and uploaded_file:
     try:
         file_content = extract_text_from_file(uploaded_file)
